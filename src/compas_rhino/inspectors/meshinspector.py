@@ -75,7 +75,7 @@ if __name__ == "__main__":
     import compas
     import compas_rhino
     from compas.datastructures import Mesh
-    from compas_rhino.helpers import MeshArtist
+    from compas_rhino import MeshArtist
 
 
     class Mouse(compas_rhino.ui.Mouse):

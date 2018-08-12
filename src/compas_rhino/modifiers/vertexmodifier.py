@@ -23,16 +23,16 @@ __email__     = 'vanmelet@ethz.ch'
 
 
 __all__ = [
-    'FaceModifier',
+    'VertexModifier',
 ]
 
 
-class FaceModifier(object):
+class VertexModifier(object):
 
     @staticmethod
-    def move_face(self, key, constraint=None, allow_off=None):
+    def move_vertex(self, key, constraint=None, allow_off=None):
         color = Rhino.ApplicationSettings.AppearanceSettings.FeedbackColor
-        nbrs  = [self.face_coordinates(nbr) for nbr in self.face_neighbours(key)]
+        nbrs  = [self.vertex_coordinates(nbr) for nbr in self.vertex_neighbours(key)]
         nbrs  = [Point3d(*xyz) for xyz in nbrs]
 
         def OnDynamicDraw(sender, e):
@@ -54,40 +54,35 @@ class FaceModifier(object):
 
         if gp.CommandResult() == Rhino.Commands.Result.Success:
             pos = list(gp.Point())
-            self.face[key]['x'] = pos[0]
-            self.face[key]['y'] = pos[1]
-            self.face[key]['z'] = pos[2]
+            self.vertex[key]['x'] = pos[0]
+            self.vertex[key]['y'] = pos[1]
+            self.vertex[key]['z'] = pos[2]
             return True
         return False
 
     @staticmethod
-    def update_face_attributes(self, keys, names=None):
+    def update_vertex_attributes(self, keys, names=None):
         if not names:
-            names = self.default_face_attributes.keys()
+            names = self.default_vertex_attributes.keys()
         names = sorted(names)
-
-        values = [self.facedata[keys[0]][name] for name in names]
-
+        values = [self.vertex[keys[0]][name] for name in names]
         if len(keys) > 1:
             for i, name in enumerate(names):
                 for key in keys[1:]:
-                    if values[i] != self.facedata[key][name]:
+                    if values[i] != self.vertex[key][name]:
                         values[i] = '-'
                         break
-
         values = map(str, values)
         values = compas_rhino.update_named_values(names, values)
-
         if values:
             for name, value in zip(names, values):
                 if value != '-':
                     for key in keys:
                         try:
-                            self.facedata[key][name] = ast.literal_eval(value)
+                            self.vertex[key][name] = ast.literal_eval(value)
                         except (ValueError, TypeError):
-                            self.facedata[key][name] = value
+                            self.vertex[key][name] = value
             return True
-
         return False
 
 
@@ -101,7 +96,7 @@ if __name__ == "__main__":
 
     from compas.datastructures import Network
     from compas_rhino.artists.networkartist import NetworkArtist
-    from compas_rhino.helpers.modifiers.facemodifier import FaceModifier
+    from compas_rhino.modifiers.vertexmodifier import VertexModifier
 
     network = Network.from_obj(compas.get('grid_irregular.obj'))
 
@@ -112,7 +107,7 @@ if __name__ == "__main__":
     artist.draw_edges()
     artist.redraw()
 
-    if FaceModifier.move_face(network, 0):
+    if VertexModifier.move_vertex(network, 0):
         artist.clear()
         artist.draw_vertices()
         artist.draw_edges()

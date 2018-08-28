@@ -3,9 +3,10 @@ from __future__ import absolute_import
 from __future__ import division
 
 import os
-import compas
+
 import compas_rhino
 
+from compas.utilities._os import create_symlink
 
 __author__    = ['Tom Van Mele', ]
 __copyright__ = 'Copyright 2016 - Block Research Group, ETH Zurich'
@@ -14,6 +15,8 @@ __email__     = 'vanmelet@ethz.ch'
 
 
 __all__ = []
+
+INSTALLABLE_PACKAGES = ('compas', 'compas_ghpython', 'compas_rhino')
 
 
 def install(version='5.0'):
@@ -39,26 +42,35 @@ def install(version='5.0'):
 
     print('Installing COMPAS packages to Rhino IronPython lib:')
 
-    base_path = os.path.abspath(os.path.join(
-        os.path.dirname(compas.__file__), '..'))
-    ipylib_path = compas_rhino.get_ironpython_lib_path(version)
+    base_path = compas_rhino._get_compas_path()
+    ipylib_path = compas_rhino._get_ironpython_lib_path(version)
 
-    for package in ('compas', 'compas_ghpython', 'compas_rhino'):
+    results = []
+    exit_code = 0
+
+    for package in INSTALLABLE_PACKAGES:
         package_path = os.path.join(base_path, package)
         symlink_path = os.path.join(ipylib_path, package)
 
         if os.path.exists(symlink_path):
-            raise Exception(
-                'Package "{}" already found in Rhino lib, try uninstalling first'.format(package))
+            results.append(
+                (package, 'ERROR: Package "{}" already found in Rhino lib, try uninstalling first'.format(package)))
+            continue
 
         try:
-            compas_rhino.create_symlink(package_path, symlink_path)
-            print('   {}: OK'.format(package))
+            create_symlink(package_path, symlink_path)
+            results.append((package, 'OK'))
         except OSError:
-            raise Exception(
-                'Cannot create symlink, try to run as administrator.')
+            results.append(
+                (package, 'Cannot create symlink, try to run as administrator.'))
 
-    print('Completed.')
+    for package, status in results:
+        print('   {} {}'.format(package.ljust(20), status))
+        if status is not 'OK':
+            exit_code = -1
+
+    print('\nCompleted.')
+    sys.exit(exit_code)
 
 
 # ==============================================================================

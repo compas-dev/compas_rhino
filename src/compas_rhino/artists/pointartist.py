@@ -2,20 +2,28 @@ from __future__ import print_function
 from __future__ import absolute_import
 from __future__ import division
 
-import compas_rhino
+from itertools import zip_longest
 
-from compas_rhino.artists import PrimitiveArtist
+import compas_rhino
+# from compas.utilities import like_list
+from compas_rhino.artists import _PrimitiveArtist
 
 
 __all__ = ['PointArtist']
 
 
-class PointArtist(PrimitiveArtist):
+def list_like(target, value, fillvalue=None):
+    if not isinstance(value, list):
+        value = [value]
+    return [u for _ , u in zip_longest(target, value, fillvalue=fillvalue)]
+
+
+class PointArtist(_PrimitiveArtist):
     """Artist for drawing ``Point`` objects.
 
     Parameters
     ----------
-    point : compas.geometry.Point
+    point : :class:`compas.geometry.Point`
         A COMPAS point.
     layer : str (optional)
         The name of the layer that will contain the point.
@@ -32,7 +40,6 @@ class PointArtist(PrimitiveArtist):
     def __init__(self, point, layer=None):
         super(PointArtist, self).__init__(point, layer=layer)
         self.settings.update({
-            'layer': layer
             'color.point': (0, 0, 0)})
 
     def draw(self):
@@ -44,7 +51,6 @@ class PointArtist(PrimitiveArtist):
             The GUID of the created Rhino object.
 
         """
-        points = []
         points = [{'pos': list(self.primitive), 'color': self.settings['color.point']}]
         guids = compas_rhino.draw_points(points, layer=self.settings['layer'], clear=False)
         return guids

@@ -1,0 +1,299 @@
+{
+  "upstream": "https://github.com/compas-dev/compas.git",
+  "source_commit": "6fb509e1f1a831b9f0832aa3d67309b39cdefc62",
+  "removal_commit": "7e009ac0dd6b48a120041864308e10b499779ae3",
+  "source_path": "src/compas_rhino",
+  "extracted_commit": "c79b9b8aeb39b63f550d558c365a64dc12ac2b69",
+  "extracted_tag": "compas-extraction",
+  "method": "git-filter-repo 2.47.0; package source, LICENSE, and host-specific documentation only; ancestors of source_commit",
+  "files": {
+    "src/compas_rhino/__init__.py": {
+      "mode": "100644",
+      "blob": "e62861e19cb49231941ea2d1dd713123e6bffe3a"
+    },
+    "src/compas_rhino/conduits/__init__.py": {
+      "mode": "100644",
+      "blob": "6f52e1cf1f3e2909006bdea3f19cfcf28e939010"
+    },
+    "src/compas_rhino/conduits/base.py": {
+      "mode": "100644",
+      "blob": "5571884cee9bcb74b86f9e45fe79d738363d03bf"
+    },
+    "src/compas_rhino/conduits/faces.py": {
+      "mode": "100644",
+      "blob": "36910cfdd69157a3551a1d85792958c7c4e39eca"
+    },
+    "src/compas_rhino/conduits/labels.py": {
+      "mode": "100644",
+      "blob": "9a5f1048fc54a60c0b5e4054f12530fdcdaa0cc0"
+    },
+    "src/compas_rhino/conduits/lines.py": {
+      "mode": "100644",
+      "blob": "49f3cdaf9f6e2800e965d75fcf8e8e5aa8222c4e"
+    },
+    "src/compas_rhino/conduits/points.py": {
+      "mode": "100644",
+      "blob": "377c27b5a0bdb113aee08e03f68b64c69e8db964"
+    },
+    "src/compas_rhino/conversions/__init__.py": {
+      "mode": "100644",
+      "blob": "a7491900022185bfe88214463cc23bce5c9928cc"
+    },
+    "src/compas_rhino/conversions/breps.py": {
+      "mode": "100644",
+      "blob": "7d4b2ab7c33f493e81bb3c63c0a1f17afa1c2553"
+    },
+    "src/compas_rhino/conversions/curves.py": {
+      "mode": "100644",
+      "blob": "7aee29f45ca21649f2162b4c9c63024bfd8b8524"
+    },
+    "src/compas_rhino/conversions/docobjects.py": {
+      "mode": "100644",
+      "blob": "bf22d6d4cb5bbcf3b314bc0825cb64fc003f324f"
+    },
+    "src/compas_rhino/conversions/exceptions.py": {
+      "mode": "100644",
+      "blob": "8a8afb4039d77766b8e74dbf75285d7b18d56a74"
+    },
+    "src/compas_rhino/conversions/extrusions.py": {
+      "mode": "100644",
+      "blob": "4059b12cc558e12f0c4f1cb27893654e782914e4"
+    },
+    "src/compas_rhino/conversions/geometry.py": {
+      "mode": "100644",
+      "blob": "5bbb1da57385b884ac6a15b72b9a45aafd4db0c0"
+    },
+    "src/compas_rhino/conversions/meshes.py": {
+      "mode": "100644",
+      "blob": "c187275a2e7f68e6d27579e547fbca7e22473cb0"
+    },
+    "src/compas_rhino/conversions/shapes.py": {
+      "mode": "100644",
+      "blob": "caba8d2e9d995f36c905a8e1d973bb9e0b0946bf"
+    },
+    "src/compas_rhino/conversions/surfaces.py": {
+      "mode": "100644",
+      "blob": "da331fe3cad22f529f798619f9d3393e1f741f9c"
+    },
+    "src/compas_rhino/conversions/transformations.py": {
+      "mode": "100644",
+      "blob": "a114990792469eb68dd4ff6ec8d2350634a583d4"
+    },
+    "src/compas_rhino/devtools.py": {
+      "mode": "100644",
+      "blob": "788b5e5eda195565214085ee8f2af47558fde554"
+    },
+    "src/compas_rhino/drawing.py": {
+      "mode": "100644",
+      "blob": "00b4974f350d2d8acac449a5cf77ab2be3e52bdd"
+    },
+    "src/compas_rhino/geometry/__init__.py": {
+      "mode": "100644",
+      "blob": "c00e03e1b3481d66501c6363ba689ab549f1d0eb"
+    },
+    "src/compas_rhino/geometry/booleans.py": {
+      "mode": "100644",
+      "blob": "64764e496ff5896db5fa1fa0ebb8378bd4ba9d6f"
+    },
+    "src/compas_rhino/geometry/brep/__init__.py": {
+      "mode": "100644",
+      "blob": "ef8c7e99500b5678d042a38fa056e2ee19617864"
+    },
+    "src/compas_rhino/geometry/brep/brep.py": {
+      "mode": "100644",
+      "blob": "432a12b96aab5d941e7e2ca88302e87660a963f1"
+    },
+    "src/compas_rhino/geometry/brep/builder.py": {
+      "mode": "100644",
+      "blob": "1717219befa6b9e62baec912ac39578fa93189ce"
+    },
+    "src/compas_rhino/geometry/brep/edge.py": {
+      "mode": "100644",
+      "blob": "63c06c75fd4b33373559aaff0869e266fb792ca2"
+    },
+    "src/compas_rhino/geometry/brep/face.py": {
+      "mode": "100644",
+      "blob": "6274dd330eeb792be54447f4ad50ec0d623e3253"
+    },
+    "src/compas_rhino/geometry/brep/loop.py": {
+      "mode": "100644",
+      "blob": "735b80a9b57cfc97d23fbffa6705f69cdee1c7e0"
+    },
+    "src/compas_rhino/geometry/brep/trim.py": {
+      "mode": "100644",
+      "blob": "16064951ca74e1fdd3d3c32f826f872630e903f8"
+    },
+    "src/compas_rhino/geometry/brep/vertex.py": {
+      "mode": "100644",
+      "blob": "e45c7ccd978e4e355f25c8f60da93d1724510c4a"
+    },
+    "src/compas_rhino/geometry/curves/__init__.py": {
+      "mode": "100644",
+      "blob": "4098c6cc16da70f1434a16d610fc91943568b9cb"
+    },
+    "src/compas_rhino/geometry/curves/curve.py": {
+      "mode": "100644",
+      "blob": "64e57b1c0ab1a1ec632e2596cb1e125466b9c746"
+    },
+    "src/compas_rhino/geometry/curves/nurbs.py": {
+      "mode": "100644",
+      "blob": "89fb1f59f4d35d367effb015c540d27dd74747a8"
+    },
+    "src/compas_rhino/geometry/surfaces/__init__.py": {
+      "mode": "100644",
+      "blob": "026f8a5ccc1d04b4be3457a39be9bb9ba0ec8812"
+    },
+    "src/compas_rhino/geometry/surfaces/nurbs.py": {
+      "mode": "100644",
+      "blob": "90d1c64aab333cbd1c16c37405f5c21ab6eedcf6"
+    },
+    "src/compas_rhino/geometry/surfaces/surface.py": {
+      "mode": "100644",
+      "blob": "e1d4b71d919e487d5d4975d89322d9b7ee9aea31"
+    },
+    "src/compas_rhino/geometry/trimesh_curvature.py": {
+      "mode": "100644",
+      "blob": "db3db1cc38e778c617799e483038ef737e070ffc"
+    },
+    "src/compas_rhino/geometry/trimesh_slicing.py": {
+      "mode": "100644",
+      "blob": "e7f4779ca50f6d0e152b9e91cd937142ef896ce5"
+    },
+    "src/compas_rhino/install.py": {
+      "mode": "100644",
+      "blob": "504066f68608620311dc8d4502995700c38bc68e"
+    },
+    "src/compas_rhino/install_plugin.py": {
+      "mode": "100644",
+      "blob": "42fefe6a051744e5ad1b02aa66d4af517ff254b2"
+    },
+    "src/compas_rhino/install_with_pip.py": {
+      "mode": "100644",
+      "blob": "b332e466ade844b274223475d55cae93543c053d"
+    },
+    "src/compas_rhino/layers.py": {
+      "mode": "100644",
+      "blob": "106c36384a2dc204030e77fe9b9ba54561601f20"
+    },
+    "src/compas_rhino/objects.py": {
+      "mode": "100644",
+      "blob": "426944e11b3409f51aab74488021c885f92c0459"
+    },
+    "src/compas_rhino/print_python_path.py": {
+      "mode": "100644",
+      "blob": "5422469b5392cafa5045c9ce9f3d7752ac86108d"
+    },
+    "src/compas_rhino/scene/__init__.py": {
+      "mode": "100644",
+      "blob": "bb0ad2cf569643e21c92f654308eaa4c420628ef"
+    },
+    "src/compas_rhino/scene/boxobject.py": {
+      "mode": "100644",
+      "blob": "097ce7114e792a9f2bf10168460ca5cb971e5764"
+    },
+    "src/compas_rhino/scene/brepobject.py": {
+      "mode": "100644",
+      "blob": "b1cc3a4a493024b5ed7e306524881495e26a1443"
+    },
+    "src/compas_rhino/scene/capsuleobject.py": {
+      "mode": "100644",
+      "blob": "59f3811b2c771dd80cd1e8720741418864a38b00"
+    },
+    "src/compas_rhino/scene/circleobject.py": {
+      "mode": "100644",
+      "blob": "5a1bec4e99b4211bf990020302c4a1d6867c0f8b"
+    },
+    "src/compas_rhino/scene/coneobject.py": {
+      "mode": "100644",
+      "blob": "8d08300dfa141c20d107ef97edf2e74d78e8e40d"
+    },
+    "src/compas_rhino/scene/curveobject.py": {
+      "mode": "100644",
+      "blob": "c1d7593d33f2cf1edc4fbf7f7904e649984ddc58"
+    },
+    "src/compas_rhino/scene/cylinderobject.py": {
+      "mode": "100644",
+      "blob": "57d2deb2a3862c464e3bbd9afdf3bc07dcd3e4bc"
+    },
+    "src/compas_rhino/scene/ellipseobject.py": {
+      "mode": "100644",
+      "blob": "5d1653b1ab43b743c22ef01e6cb383ee06e05af0"
+    },
+    "src/compas_rhino/scene/frameobject.py": {
+      "mode": "100644",
+      "blob": "3df859cbc748ebe149c035a52e92c1bd0f5f67f4"
+    },
+    "src/compas_rhino/scene/graphobject.py": {
+      "mode": "100644",
+      "blob": "d9d467839175da4974f7ca1bf716cdcf09258caf"
+    },
+    "src/compas_rhino/scene/helpers.py": {
+      "mode": "100644",
+      "blob": "c42d9da13161a916e173a395fc5f6f1a7dc2dc73"
+    },
+    "src/compas_rhino/scene/lineobject.py": {
+      "mode": "100644",
+      "blob": "1c0528818b377eea3c03960c3a6b0ba907d7187d"
+    },
+    "src/compas_rhino/scene/meshobject.py": {
+      "mode": "100644",
+      "blob": "0eed5f5feb1fce3b56b859c6b6bf4c9b8bad2986"
+    },
+    "src/compas_rhino/scene/planeobject.py": {
+      "mode": "100644",
+      "blob": "ea03d31ae7e18a53229ea72976328dc087e2aa77"
+    },
+    "src/compas_rhino/scene/pointobject.py": {
+      "mode": "100644",
+      "blob": "9bdcd7b96fe67fc640e85a70a1506af584bc87a5"
+    },
+    "src/compas_rhino/scene/polygonobject.py": {
+      "mode": "100644",
+      "blob": "28ec4bbbda1943da296721e2c4123baf00552435"
+    },
+    "src/compas_rhino/scene/polyhedronobject.py": {
+      "mode": "100644",
+      "blob": "b92bc6f7bf98824071988eacf24fdd01e665ee13"
+    },
+    "src/compas_rhino/scene/polylineobject.py": {
+      "mode": "100644",
+      "blob": "94a739a47a3a9f3575114af95a95a893b6a2ffd9"
+    },
+    "src/compas_rhino/scene/sceneobject.py": {
+      "mode": "100644",
+      "blob": "7c76104a974a049f56e45477c183137b1c39e59c"
+    },
+    "src/compas_rhino/scene/sphereobject.py": {
+      "mode": "100644",
+      "blob": "6ee6ac38c6bea8dffcdf39705686ce44ca288519"
+    },
+    "src/compas_rhino/scene/surfaceobject.py": {
+      "mode": "100644",
+      "blob": "1079576dd0223df0a0e60f7add092ef0c588ffa8"
+    },
+    "src/compas_rhino/scene/torusobject.py": {
+      "mode": "100644",
+      "blob": "864ca598e37f097551dc1a8dd587f01ed7b79378"
+    },
+    "src/compas_rhino/scene/vectorobject.py": {
+      "mode": "100644",
+      "blob": "f9f30fa39d4ad27ed5dd8be50fbb82591e68b5b6"
+    },
+    "src/compas_rhino/scene/volmeshobject.py": {
+      "mode": "100644",
+      "blob": "31f79491df4ba76464cfaf248c1bf143a95e0a0b"
+    },
+    "src/compas_rhino/ui.py": {
+      "mode": "100644",
+      "blob": "a43bd9a63db192ab34145f8be9c4c7e681eb4514"
+    },
+    "src/compas_rhino/uninstall.py": {
+      "mode": "100644",
+      "blob": "997baf62e9f18c3415107671a609b4c0c72f6cd8"
+    },
+    "src/compas_rhino/uninstall_plugin.py": {
+      "mode": "100644",
+      "blob": "7c2e903cc80e42c7caef314b0df8d9f484e6b7d6"
+    }
+  }
+}

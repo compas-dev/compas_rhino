@@ -1,0 +1,58 @@
+# Authors
+
+Contributors retained in the extracted Git history:
+
+- Tom Van Mele <vanmelet@ethz.ch>
+- Chen Kasirer <ckasirer@ethz.ch>
+- brgcode <vanmelet@ethz.ch>
+- tomvanmele <tom.v.mele@gmail.com>
+- Gonzalo Casas <casas@arch.ethz.ch>
+- brgcode <van.mele@arch.ethz.ch>
+- Tom Van Mele <brg@arch.ethz.ch>
+- Li <leochen1990@gmail.com>
+- Licini <leochen1990@gmail.com>
+- brgcode <brg@arch.ethz.ch>
+- beverly <lytle@arch.ethz.ch>
+- Tom Van Mele <tom.v.mele@gmail.com>
+- Chen Kasirer <kasirer@arch.ethz.ch>
+- brgcode <tom.v.mele@gmail.com>
+- Tom Van Mele <van.mele@arch.ethz.ch>
+- beverlylytle <57254617+beverlylytle@users.noreply.github.com>
+- Xingxin HE <xingxin.he@mail.polimi.it>
+- Li Chen <leochen1990@gmail.com>
+- tetov <anton@tetov.se>
+- wenqian157 <44199787+wenqian157@users.noreply.github.com>
+- Robin Oval <oval@arch.ethz.ch>
+- brgbits <brg@arch.ethz.ch>
+- Eric <ericgozzi@cosmicgarage.ch>
+- Joseph Kenny <jckenny59@gmail.com>
+- andrewtliew <liew@arch.ethz.ch>
+- duchaoyu <duch@student.ethz.ch>
+- nmaslarinos <91247922+nmaslarinos@users.noreply.github.com>
+- panos ppchr <ppapachar@gmail.com>
+- Victor LEUNG <yck011522@gmail.com>
+- Andrew Liew <liew@arch.ethz.ch>
+- Gonzalo Casas <gonzalocasas@gmail.com>
+- Juney Lee <juney.lee@arch.ethz.ch>
+- Rippmann <32359552+Rippmann@users.noreply.github.com>
+- Romana Rust <rust@arch.ethz.ch>
+- Anton Tetov <anton@tetov.se>
+- Chen Kasirer <chen902@gmail.com>
+- juneylee <juney.lee@arch.ethz.ch>
+- nizartaha <38039580+nizartaha@users.noreply.github.com>
+- robin-oval <34314884+robin-oval@users.noreply.github.com>
+- Achillx <xydis@arch.ethz.ch>
+- Gozzi  Eric <ericgozzi@cosmicgarage.ch>
+- Rafael Pastrana <pastrana@arch.ethz.ch>
+- Victor Leung <yck011522@gmail.com>
+- copilot-swe-agent[bot] <198982749+Copilot@users.noreply.github.com>
+- freeeki <freeeki@gmail.com>
+- obucklin <obucklin@gmail.com>
+- tetov <a@tetov.se>
+- tomvanmele <van.mele@arch.ethz.ch>
+- GeneKao <kao.gene@gmail.com>
+- Jef Rombouts <jef.rombouts@vub.be>
+- Lotte <lottealdinger@gmail.com>
+- Zac Zhang <zac.z.zhang@outlook.com>
+- obucklin <55446042+obucklin@users.noreply.github.com>
+- petrasvestartas <petrasvestartas@gmail.com>
